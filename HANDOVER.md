@@ -96,7 +96,7 @@ After:
 
 ## Useful Improvement
 
-Improved browser import feedback.
+1.Improved browser import feedback.
 
 The import workflow now distinguishes between successful, partial, and failed imports.
 
@@ -111,6 +111,25 @@ For partial imports, the UI shows:
 For failed requests, the browser now displays the actual API error instead of incorrectly presenting the import as successful.
 
 This makes import results clearer to the user and reduces the chance of assuming that records were imported when the request actually failed.
+
+2.Improved the browser import form so that after a successful or partial import, the selected CSV file is automatically cleared from the file input.
+
+This reduces accidental re-submission of the same CSV and leaves the import form ready for the next import.
+
+### Verification
+
+Imported `samples/invoices-new.csv` through the browser.
+
+Result:
+
+- 2 invoices imported
+- import result displayed correctly
+- selected CSV filename was cleared from the file input
+- invoice register refreshed
+
+The official fixture was then restored with:
+
+`python restore_fixture.py --replace`
 
 ## Verification
 
