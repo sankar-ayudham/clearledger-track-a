@@ -96,23 +96,7 @@ After:
 
 ## Useful Improvement
 
-1.Improved browser import feedback.
-
-The import workflow now distinguishes between successful, partial, and failed imports.
-
-For partial imports, the UI shows:
-
-- imported count
-- skipped count
-- rejected count
-- rejected CSV line number
-- rejection reason
-
-For failed requests, the browser now displays the actual API error instead of incorrectly presenting the import as successful.
-
-This makes import results clearer to the user and reduces the chance of assuming that records were imported when the request actually failed.
-
-2.Improved the browser import form so that after a successful or partial import, the selected CSV file is automatically cleared from the file input.
+Improved the browser import form so that after a successful or partial import, the selected CSV file is automatically cleared from the file input.
 
 This reduces accidental re-submission of the same CSV and leaves the import form ready for the next import.
 
